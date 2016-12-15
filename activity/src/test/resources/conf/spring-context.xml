@@ -12,7 +12,7 @@
 
 
 
-	<context:property-placeholder location="jdbc.properties" />
+	<context:property-placeholder location="classpath:conf/jdbc.properties" />
 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="${jdbc.driver}" />
