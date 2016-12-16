@@ -15,7 +15,13 @@ public class MainTest {
 	private Main main;
 
 	@Test
-	public void test() {
-		main.execute();
+	public void main() {
+		main.executeSimple();
 	}
+
+	@Test
+	public void branch() {
+		main.executeBranch();
+	}
+
 }
