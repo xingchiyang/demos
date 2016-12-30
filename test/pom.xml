@@ -13,6 +13,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<org.slf4j-version>1.7.21</org.slf4j-version>
+		<spring.version>4.1.5.RELEASE</spring.version>
 	</properties>
 
 	<dependencies>
@@ -28,50 +29,106 @@
 			<version>1.2.7</version>
 		</dependency>
 
-			<!-- 公共log -->
-			<dependency>
-				<groupId>ch.qos.logback</groupId>
-				<artifactId>logback-core</artifactId>
-				<version>1.1.7</version>
-			</dependency>
-		
-		     <dependency>
-		         <groupId>ch.qos.logback</groupId>
-		         <artifactId>logback-classic</artifactId>
-		         <version>1.1.6</version>
-		     </dependency>
-		     
-		    <dependency>
-	            <groupId>org.slf4j</groupId>
-	            <artifactId>slf4j-api</artifactId>
-	            <version>${org.slf4j-version}</version>  
-	        </dependency>
-		     
-		     <dependency>  
-			    <groupId>org.slf4j</groupId>  
-			    <artifactId>jcl-over-slf4j</artifactId>  
-			    <version>${org.slf4j-version}</version>  
-			</dependency>  
-			<dependency>  
-			    <groupId>org.slf4j</groupId>  
-			    <artifactId>log4j-over-slf4j</artifactId>  
-			    <version>${org.slf4j-version}</version>  
-			</dependency>  
-			<dependency>  
-			    <groupId>org.slf4j</groupId>  
-			    <artifactId>jul-to-slf4j</artifactId>  
-			    <version>${org.slf4j-version}</version>  
-			</dependency>  
-			<dependency>  
-			    <groupId>org.jboss.logging</groupId>  
-			    <artifactId>jboss-logging</artifactId>  
-			    <version>3.1.4.GA</version>  
-			</dependency> 
-			<dependency>  
-			    <groupId>commons-logging</groupId>  
-			    <artifactId>commons-logging</artifactId>  
-			    <version>1.1.3</version>  
-			</dependency>
-			<!-- 公共log结束 -->
+		<!-- 公共log -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>1.1.7</version>
+		</dependency>
+
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.1.6</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${org.slf4j-version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>${org.slf4j-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>log4j-over-slf4j</artifactId>
+			<version>${org.slf4j-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jul-to-slf4j</artifactId>
+			<version>${org.slf4j-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.logging</groupId>
+			<artifactId>jboss-logging</artifactId>
+			<version>3.1.4.GA</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.3</version>
+		</dependency>
+		<!-- 公共log结束 -->
+		<!-- spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-expression</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<!-- end of spring -->
 	</dependencies>
 </project>
