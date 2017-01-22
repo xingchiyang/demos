@@ -1,0 +1,53 @@
+<configuration>
+
+	<appender name="stdout_1" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>[stdout_1] %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} -%msg%n
+			</pattern>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>debug</level>
+		</filter>
+	</appender>
+
+	<appender name="stdout_2" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>[stdout_2] %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} -%msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="stdout_3" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>[stdout_3] %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} -%msg%n
+			</pattern>
+		</encoder>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>warn</level>
+		</filter>
+	</appender>
+
+	<appender name="stdout_4" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>[stdout_4] %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} -%msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="com.yb.logback.Test1" level="trace" additivity="true">
+		<appender-ref ref="stdout_1" />
+	</logger>
+
+	<logger name="com.yb.Test2" level="debug" additivity="true">
+		<appender-ref ref="stdout_2" />
+	</logger>
+	
+	<logger name="com.yb" level="info" additivity="true">
+		<appender-ref ref="stdout_3" />
+	</logger>
+
+	<root level="warn">
+		<appender-ref ref="stdout_4" />
+	</root>
+
+</configuration> 

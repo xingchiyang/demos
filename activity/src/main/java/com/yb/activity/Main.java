@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.annotation.PostConstruct;
+
 import org.activiti.engine.RepositoryService;
 import org.activiti.engine.RuntimeService;
 import org.activiti.engine.TaskService;
@@ -22,6 +24,11 @@ public class Main {
 	private TaskService taskService;
 	private static String KEY_MAIN = "main";
 	private static String KEY_BRANCH = "branch";
+
+	@PostConstruct
+	public void init() {
+		System.out.println("test");
+	}
 
 	public void executeSimple() {
 		begin(KEY_MAIN);
