@@ -11,8 +11,13 @@ import org.slf4j.LoggerFactory;
  */
 public class DyncParam {
 	private static Logger logger = LoggerFactory.getLogger(DyncParam.class);
-
+	private static String str;
+	public DyncParam(String str){
+		this.str = str;
+	}
+	
 	public static void main(String[] args) {
-		logger.info("hello, 1:{},2:{},3:{}", "1", 2);
+		DyncParam param = new DyncParam("p");
+		logger.info("hello, 1:{},2:{},3:{}", "1", 2, param);
 	}
 }
